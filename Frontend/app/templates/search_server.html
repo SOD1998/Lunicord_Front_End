@@ -1,0 +1,32 @@
+{% extends "main.html" %}
+{% block titulo %} Buscar Servidores {% endblock %}
+{% block contenido %}
+
+<section class="section">
+    <div class="columns">
+        <div class="column">
+            <h3 class="is-size-3">Servidores</h3>
+            <a href="{{url_for('servidores')}}" class="button is-success">Buscar</a>
+            <input type="text" placeholder="Buscar servidor...">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for servidor in servidores %}
+                    <tr>
+                        <td>{{servidor[1]}}</td>
+                        <td>
+                            {# Pasar el id (lo que hay en servidor[0]) #}
+                            <a href="{{url_for('unirse_servidor', id=servidor[0])}}" class="button is-info">Unirse</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/log_in.css">
+    <title>Crear una cuenta</title>
+</head>
+<body>
+    <div class="registration-container">
+        <h1>Crear una cuenta</h1>
+        <form action="{{url_for('main')}}" method="post">
+            <label for="email">Correo electrónico:</label>
+            <input required type="text" class="input" placeholder="Tu correo electrónico" name="email" id="email">
+            <label for="username">Nombre de usuario:</label>
+            <input required type="text" class="input" placeholder="Tu nombre de usuario" name="username" id="username">
+            <label for="name">Nombre:</label>
+            <input required type="text" class="input" placeholder="Tu nombre" name="name" id="name">
+            <label for="lastname">Apellido:</label>
+            <input required type="text" class="input" placeholder="Tu apellido" name="lastname" id="lastname">
+            <label for="password">Contraseña:</label>
+            <input required type="password" class="input" placeholder="Tu contraseña" name="password" id="password">
+            <label for="birthdate">Fecha de nacimiento:</label>
+            <input required type="date" class="date" name="birthdate" id="birthdate">
+            <button type="submit" class="button">Confirmar</button>
+            <button href="{{url_for('log_in')}}" type="submit" class="button">Volver</button>
+        </form>
+    </div>
+</body>
+</html>

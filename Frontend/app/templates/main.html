@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <title>Lunicord - {% block titulo %}{% endblock %}</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="user-info">
+            <img src="../static/images/logo.png" alt="Avatar del usuario">
+            <p>Usuario {%block usuario %}{% endblock %}</p>
+        </div>
+        <div class="icon-buttons">
+            <button class="add-server-button"><span>+</span></button>
+            <div class="tooltip">Añadir un Servidor</div>
+            <a href="Opciones_Servidor.html" class= "Botón">
+             <img src="Imagen/servidor.png"  class="Servidor">
+             <button class="explore-servers-button"></button>
+             <div class="tooltip">Explorar Servidores</div>
+            </a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="yellow-background">
+            <div class="centered-text">
+                <p>Aun no te has unido a un servidor</p>
+                <p>Intenta buscar uno o crea uno propio</p>
+            </div>
+        </div>
+    </div>
+    {%block contenido %} {% endblock %}
+</body>
+</html>
